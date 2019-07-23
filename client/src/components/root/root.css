@@ -18,6 +18,10 @@
   color: white;
 }
 
+.content {
+  margin: 0 12.5%;
+}
+
 .content__banner {
   overflow: hidden;
   width: 100%;
