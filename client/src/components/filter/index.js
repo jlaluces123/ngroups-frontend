@@ -19,14 +19,14 @@ const Filter = (props) => {
       <form className = "form" onSubmit = {props.handleSubmit}>
 
         {/* Handle a category if selected */}
-        <select className = "select" id = "categories" value = {props.categoryValue} onChange = {props.handleChange}>
+        <select className = "select" id = "categories" value = {props.categoryValue} onChange = {props.handleCategoryChange}>
           <option value = "all-categories">All Categories</option> {/* On by default */}
           <option value = "SONS">SONS</option>
           <option value = "Sports">Sports</option>
         </select>
 
         {/* Handle a day if selected */}
-        <select className = "select" id = "days" value = {props.daysValue} onChange = {props.handleChange}>
+        <select className = "select" id = "days" value = {props.daysValue} onChange = {props.handleDayChange}>
           <option value = "all-days">All Days</option> {/* On by default */}
           <option value = "monday">Monday</option>
           <option value = "tuesday">Tuesday</option>

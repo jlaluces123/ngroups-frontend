@@ -38,12 +38,29 @@ class Root extends React.Component {
       .catch(err => console.log(err));
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.categoryValue !== prevState.categoryValue || this.state.daysValue !== prevState.daysValue) {
+      console.log("days value comparison: \n", this.state.daysValue, prevState.daysValue);
+      console.log("category value comparison: \n", this.state.categoryValue, prevState.categoryValue);
+    }
+  }
+
   handleSubmit = e => {
     console.log("handle submit");
   };
 
-  handleChange = e => {
-    console.log("handle change");
+  handleDayChange = e => {
+    console.log("handle DAY change");
+    // console.log("e.target.value is: \n", e.target.value);
+    this.setState({ daysValue: e.target.value });
+    // console.log("current settings are: \n", this.state.categoryValue, this.state.daysValue);
+  };
+
+  handleCategoryChange = e => {
+    console.log("handle CATEGPRY change");
+    // console.log("e.target.value is: \n", e.target.value);
+    this.setState({ categoryValue: e.target.value });
+    // console.log("current settings are: \n", this.state.categoryValue, this.state.daysValue);
   };
 
 
@@ -75,7 +92,8 @@ class Root extends React.Component {
             handleSubmit = {this.handleSubmit}
             categoryValue = {this.state.categoryValue}
             daysValue = {this.state.daysValue}
-            handleChange = {this.handleChange}
+            handleDayChange = {this.handleDayChange}
+            handleCategoryChange = {this.handleCategoryChange}
           />
         </div>
       </div>
