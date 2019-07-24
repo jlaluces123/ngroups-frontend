@@ -1,0 +1,26 @@
+.filter {
+  margin: 0 12.5%;
+  margin-top: 3%;
+}
+
+.form {
+  height: 20vh;
+}
+
+.select {
+  -webkit-appearance: none;
+  height: 44px;
+  width: 28%;
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-image: url(/static/media/chevron-arrow-down.94b647cc.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  background-origin: content-box;
+}

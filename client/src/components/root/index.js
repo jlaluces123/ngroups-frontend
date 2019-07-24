@@ -7,14 +7,43 @@ import NG_Text_Banner from "../../assets/NG_Text_Banner_2019.jpg";
 /* Component Imports */
 import Filter from "../filter/index.js";
 
+
+/*
+  Props for {Root}:
+    1. handleSubmit()
+      - This will make the fetch call to the backend API based on the given options
+    2. categoryValue = ?
+      -  From {Root's} state, this will determine if a category has been selected and switch promptly
+    3. daysValue = ?
+      - Same thing as #2 but will determine if a specific day has been selected
+    4. handleChange()
+      - handleChange will set the value in {Root's} state to the event.target.value of each category
+*/
+
 class Root extends React.Component {
   state = {
     nGroups: [], /* Neighborhood Groups */
     filteredGroups: [],
+    categoryValue: "all-categories",
+    daysValue: "all-days",
   };
 
   componentDidMount() {
     console.log("Component mounted\n");
+    fetch(`http://dev-env.9mbsdkkmn3.us-west-2.elasticbeanstalk.com/api/ngroup/`)
+      .then(res => res.json())
+      .then(result => {
+        console.log(result);
+      })
+      .catch(err => console.log(err));
+  };
+
+  handleSubmit = e => {
+    console.log("handle submit");
+  };
+
+  handleChange = e => {
+    console.log("handle change");
   };
 
 
@@ -41,8 +70,13 @@ class Root extends React.Component {
           <div className = "content__divider"></div>
         </div>
 
-        <div className = "filter">
-          <Filter />
+        <div className = "menus">
+          <Filter
+            handleSubmit = {this.handleSubmit}
+            categoryValue = {this.state.categoryValue}
+            daysValue = {this.state.daysValue}
+            handleChange = {this.handleChange}
+          />
         </div>
       </div>
     );
