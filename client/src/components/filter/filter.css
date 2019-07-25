@@ -99,8 +99,10 @@
 
   .form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    height: auto;
+    margin-bottom: 5%;
   }
 
   .select {
@@ -108,8 +110,9 @@
   }
 
   .select, .submit__btn {
-    width: 33%;
+    width: 100%;
     font-size: 15px;
+    margin-top: 2%;
   }
 
 }
