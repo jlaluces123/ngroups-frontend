@@ -17,10 +17,21 @@
   font-size: 16px;
   margin-right: 10px;
   cursor: pointer;
-  background-image: url(/static/media/chevron-arrow-down.94b647cc.svg);
+  background-image: url("../../assets/chevron-arrow-down.svg");
   background-size: 20px;
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;
   background-origin: content-box;
+}
+
+.submit__btn {
+  height: 44px;
+  background: none;
+  width: 40%;
+  border-radius: 4px;
+  cursor: pointer;
+  /* border: 1px solid grey; */
+  border-color: rgb(166, 166, 166);
+  font-size: 1rem;
 }
