@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './responsive.css';
 
 /* Component Imports */
 import Root from "./components/root/index.js";
