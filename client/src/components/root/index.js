@@ -6,6 +6,7 @@ import NG_Text_Banner from "../../assets/NG_Text_Banner_2019.jpg";
 
 /* Component Imports */
 import Filter from "../filter/index.js";
+import List from "../list/index.js";
 
 
 /*
@@ -33,15 +34,15 @@ class Root extends React.Component {
     fetch(`http://dev-env.9mbsdkkmn3.us-west-2.elasticbeanstalk.com/api/ngroup/`)
       .then(res => res.json())
       .then(result => {
-        console.log(result);
+        this.setState({ nGroups: result.results });
       })
       .catch(err => console.log(err));
   };
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.categoryValue !== prevState.categoryValue || this.state.daysValue !== prevState.daysValue) {
-      console.log("days value comparison: \n", this.state.daysValue, prevState.daysValue);
-      console.log("category value comparison: \n", this.state.categoryValue, prevState.categoryValue);
+      // console.log("days value comparison: \n", this.state.daysValue, prevState.daysValue);
+      // console.log("category value comparison: \n", this.state.categoryValue, prevState.categoryValue);
     }
   }
 
@@ -95,6 +96,10 @@ class Root extends React.Component {
             handleDayChange = {this.handleDayChange}
             handleCategoryChange = {this.handleCategoryChange}
           />
+        </div>
+
+        <div className="results">
+          <List list = {this.state.nGroups} />
         </div>
       </div>
     );
