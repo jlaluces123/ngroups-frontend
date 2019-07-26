@@ -1,0 +1,111 @@
+.filter {
+  margin: 0 12.5%;
+  margin-top: 3%;
+}
+
+.form {
+  height: 20vh;
+}
+
+.select {
+  -webkit-appearance: none;
+  height: 44px;
+  width: 28%;
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-image: url("../../assets/chevron-arrow-down.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  background-origin: content-box;
+}
+
+.submit__btn {
+  height: 44px;
+  background: none;
+  width: 40%;
+  border-radius: 4px;
+  cursor: pointer;
+  /* border: 1px solid grey; */
+  border-color: rgb(166, 166, 166);
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .filter {
+    margin: 0 2%;
+    margin-top: 3%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    margin-bottom: 5%;
+  }
+
+  .select {
+    background-size: 15px;
+  }
+
+  .select, .submit__btn {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 2%;
+  }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .filter {
+    margin: 0 2%;
+    margin-top: 3%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .select {
+    background-size: 15px;
+  }
+
+  .select, .submit__btn {
+    margin-top: 4%;
+    width: 100%;
+    font-size: 15px;
+  }
+}

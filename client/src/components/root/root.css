@@ -1,0 +1,153 @@
+.home__banner {
+  height: 80vh;
+  background-image: url("../../assets/NG_Banner_2019.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__header {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.content {
+  margin: 0 12.5%;
+}
+
+.content__banner {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  max-width: 2500px;
+}
+
+.content__img {
+  height: 150px;
+}
+
+.content__text {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.text__header {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 2%;
+}
+
+.text__paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.content__divider {
+  border-bottom: 1px solid lightgrey;
+  height: 2px;
+}
+
+.results {
+  margin: 0 12.5%;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+
+
+
+
+
+
+
+
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .banner__header {
+    font-size: 4rem;
+  }
+
+  .text__paragraph {
+    font-size: 17px;
+  }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/* @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+} */
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .banner__header {
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .content {
+    margin: 0 2%;
+  }
+
+  .text__paragraph {
+    font-size: 17px;
+  }
+
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .banner__header {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+
+  .content {
+    margin: 0 2%;
+  }
+
+  .content__img {
+    height: 110px;
+  }
+
+  .text__paragraph {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+}
