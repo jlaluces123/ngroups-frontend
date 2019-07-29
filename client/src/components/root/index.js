@@ -53,8 +53,12 @@ class Root extends React.Component {
     if (this.state.categoryValue === "all-categories" && this.state.daysValue === "all-days") {
       console.log("default handle submit");
     } else {
-      const result = this.state.nGroups.filter(group => console.log(group.day_of_week.toLowerCase() === this.state.daysValue));
-      return result;
+      // This is a category filter (work in progress)
+      // const result = this.state.nGroups.filter(group => console.log(group.categories[0] === this.state.categoryValue))
+
+      // This is for a day-filter (work in progress)
+      // const result = this.state.nGroups.filter(group => console.log(group.day_of_week.toLowerCase() === this.state.daysValue));
+      // return result;
     }
   };
 
