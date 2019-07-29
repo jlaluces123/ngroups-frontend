@@ -35,6 +35,7 @@ class Root extends React.Component {
       .then(res => res.json())
       .then(result => {
         this.setState({ nGroups: result.results });
+        console.log(this.state.nGroups);
       })
       .catch(err => console.log(err));
   };
@@ -47,21 +48,32 @@ class Root extends React.Component {
   }
 
   handleSubmit = e => {
+    e.preventDefault();
     console.log("handle submit");
+    if (this.state.categoryValue === "all-categories" && this.state.daysValue === "all-days") {
+      console.log("default handle submit");
+    } else {
+      // This is a category filter (work in progress)
+      // const result = this.state.nGroups.filter(group => console.log(group.categories[0] === this.state.categoryValue))
+
+      // This is for a day-filter (work in progress)
+      // const result = this.state.nGroups.filter(group => console.log(group.day_of_week.toLowerCase() === this.state.daysValue));
+      // return result;
+    }
   };
 
   handleDayChange = e => {
     console.log("handle DAY change");
     // console.log("e.target.value is: \n", e.target.value);
     this.setState({ daysValue: e.target.value });
-    // console.log("current settings are: \n", this.state.categoryValue, this.state.daysValue);
+
   };
 
   handleCategoryChange = e => {
     console.log("handle CATEGPRY change");
     // console.log("e.target.value is: \n", e.target.value);
     this.setState({ categoryValue: e.target.value });
-    // console.log("current settings are: \n", this.state.categoryValue, this.state.daysValue);
+    console.log(e.target.name, e.target.value);
   };
 
 
