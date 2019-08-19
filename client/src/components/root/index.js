@@ -30,7 +30,6 @@ class Root extends React.Component {
   };
 
   componentDidMount() {
-    console.log("Component mounted\n");
     fetch(`http://dev-env.9mbsdkkmn3.us-west-2.elasticbeanstalk.com/api/ngroup/`)
       .then(res => res.json())
       .then(result => {
@@ -70,7 +69,7 @@ class Root extends React.Component {
   };
 
   handleCategoryChange = e => {
-    console.log("handle CATEGPRY change");
+    console.log("handle CATEGORY change");
     // console.log("e.target.value is: \n", e.target.value);
     this.setState({ categoryValue: e.target.value });
     console.log(e.target.name, e.target.value);
